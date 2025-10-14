@@ -142,3 +142,24 @@ class Citybox extends StatelessWidget {
     );
   }
 }
+
+// Container(
+                //   width: 165,
+                //   height: 30,
+                //   clipBehavior: Clip.hardEdge,
+                //   decoration: BoxDecoration(
+                //     color: Colors.transparent,
+                //     borderRadius: const BorderRadius.only(
+                //       bottomLeft: Radius.circular(5),
+                //       bottomRight: Radius.circular(5),
+                //     ),
+                //   ),
+                //   child: BackdropFilter(
+                //     filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
+                //     child: Container(
+                //       color: Colors.black.withOpacity(
+                //         0.4,
+                //       ), // optional dark overlay
+                //     ),
+                //   ),
+                // ),

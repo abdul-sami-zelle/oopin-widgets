@@ -5,7 +5,7 @@ class ThemeDataStyle {
     useMaterial3: true,
     fontFamily: 'Poppins',
     colorScheme: const ColorScheme.light(
-      primary: Color(0xff40B4C1), //primary
+      primary: Color(0xff007083), //primary
       primaryContainer: Color(0xfffafafa), // container
       secondary: Color(0xff535353), // text dark
       onSecondary: Color(0xff757575), // text light

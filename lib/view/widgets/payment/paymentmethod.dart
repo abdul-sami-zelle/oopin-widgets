@@ -64,11 +64,12 @@ class PaymentOptionCard extends StatelessWidget {
             decoration: BoxDecoration(
               // color: Colors.white,
               borderRadius: BorderRadius.circular(4),
-              image: DecorationImage(
-                image: AssetImage(imagePath),
-                fit: BoxFit.cover,
-              ),
+              // image: DecorationImage(
+              //   image: AssetImage(imagePath),
+              //   fit: BoxFit.cover,
+              // ),
             ),
+            child: Image.asset(imagePath,color: Colors.white,),
           ),
         ],
       ),

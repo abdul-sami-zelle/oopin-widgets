@@ -16,8 +16,9 @@ class Opincaller extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 80,
       width: MediaQuery.of(context).size.width - 20,
-      padding: EdgeInsets.all(5),
+      padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Color(0xff007083),
         borderRadius: BorderRadius.circular(5),
@@ -34,12 +35,13 @@ class Opincaller extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(5),
-            child: SizedBox(height: 50, child: Image.asset(image!)),
+            child: SizedBox(child: Image.asset(image!)),
           ),
           SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   name!,
@@ -52,27 +54,32 @@ class Opincaller extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 5),
-                Text(
-                  location!,
-                  style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 10,
-                    fontWeight: FontWeight.w400,
-                    height: 1,
-                    color: Color(0xffFFFFFF),
-                  ),
+                Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      location!,
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        height: 1,
+                        color: Color(0xffFFFFFF),
+                      ),
+                    ),
+                    Text(
+                      age!,
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        height: 1,
+                        color: Color(0xffFFFFFF),
+                      ),
+                    ),
+                  ],
                 ),
-                Text(
-                  age!,
-                  style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 10,
-                    fontWeight: FontWeight.w400,
-                    height: 1,
-                    color: Color(0xffFFFFFF),
-                  ),
-                ),
-                SizedBox(height: 5),
+                // SizedBox(height: 5),
                 // Text(
                 //   description!,
                 //   style: TextStyle(
@@ -89,8 +96,8 @@ class Opincaller extends StatelessWidget {
             ),
           ),
           Container(
-            width: 80,
-            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+            // width: 80,
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             decoration: BoxDecoration(
               color: Color(0xff007083),
               borderRadius: BorderRadius.circular(5),
@@ -99,15 +106,17 @@ class Opincaller extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(height: 20, child: Image.asset('assets/img/call.png')),
+                SizedBox(height: 5),
                 Text(
                   'Call Now',
                   style: TextStyle(
                     fontFamily: 'Poppins',
-                    fontSize: 8,
-                    fontWeight: FontWeight.w400,
-                    height: 1.5,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w500,
+                    height: 1,
                     color: Color(0xffFFFFFF),
                   ),
                 ),

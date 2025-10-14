@@ -51,7 +51,7 @@ class ReviewList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width - 20,
-      height: 400,
+      height: 450,
       child: ListView.builder(
         itemCount: reviewItems.length,
         padding: const EdgeInsets.all(8),
