@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:oopin/utils/changeprofile.dart';
 import 'package:oopin/utils/deleteaccountpopup.dart';
+import 'package:oopin/utils/drawer.dart';
 import 'package:oopin/utils/endcallpopup.dart';
 import 'package:oopin/utils/feedbackpopup.dart';
 import 'package:oopin/utils/helpoptions.dart';
 import 'package:oopin/utils/infobox.dart';
 import 'package:oopin/utils/pageheader.dart';
 import 'package:oopin/utils/policybox.dart';
+import 'package:oopin/utils/successpopup.dart';
 import 'package:oopin/utils/textfield.dart';
 import 'package:oopin/utils/userheader.dart';
 import 'package:oopin/view/widgets/cities/cities.dart';
@@ -272,6 +275,41 @@ class Newpage extends StatelessWidget {
                   EndCallDialog(),
                   SizedBox(height: 40),
                   DeleteAccountDialog(),
+                  SizedBox(height: 40),
+                  ClaimSubmitDialog(
+                    title: 'Claim Submitted',
+                    content:
+                        'Your claim regarding this call has been submitted successfully. We will promptly review your claim and reach out for further communication.',
+                    centerImage: 'assets/img/checkmark.png',
+                  ),
+                  SizedBox(height: 40),
+                  ClaimSubmitDialog(
+                    title: 'Claim Not Submitted',
+                    content:
+                        'Your claim regarding this call has been submitted successfully. We will promptly review your claim and reach out for further communication.',
+                    centerImage: 'assets/img/checkmark.png',
+                  ),
+                  SizedBox(height: 40),
+                  ClaimSubmitDialog(
+                    title: 'Message Sent',
+                    content:
+                        'Your claim regarding this call has been submitted successfully. We will promptly review your claim and reach out for further communication.',
+                    centerImage: 'assets/img/checkmark.png',
+                  ),
+                  SizedBox(height: 40),
+                  CustomSidebar(),
+                  SizedBox(height: 40),
+                  WhiteDrawer(),
+                  SizedBox(height: 40),
+                  CustomNavigationDrawer(),
+                  SizedBox(height: 40),
+                  CustomNavigationSideBar(),
+                  SizedBox(height: 40),
+                  ChangeProfilePictureCard(
+                    onCameraTap: () {},
+                    onGalleryTap: () {},
+                    onClose: () {},
+                  ),
                   SizedBox(height: 50),
                 ],
               ),
