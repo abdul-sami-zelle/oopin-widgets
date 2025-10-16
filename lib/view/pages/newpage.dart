@@ -11,21 +11,33 @@ import 'package:oopin/utils/policybox.dart';
 import 'package:oopin/utils/successpopup.dart';
 import 'package:oopin/utils/textfield.dart';
 import 'package:oopin/utils/userheader.dart';
+import 'package:oopin/view/widgets/deleteoopin/deletereason.dart';
+import 'package:oopin/view/widgets/oopin_call_history/call_history.dart';
 import 'package:oopin/view/widgets/cities/cities.dart';
 import 'package:oopin/view/widgets/dashoard/activitysection.dart';
 import 'package:oopin/view/widgets/dashoard/callhistorycard.dart';
 import 'package:oopin/view/widgets/dashoard/cityvisited.dart';
 import 'package:oopin/view/widgets/dashoard/topsearch.dart';
 import 'package:oopin/view/widgets/home/featuredcity.dart';
+import 'package:oopin/view/widgets/oopin-services/service_card.dart';
+import 'package:oopin/view/widgets/oopin_dashboard/dasboard_grid.dart';
 import 'package:oopin/view/widgets/opincaller.dart';
 import 'package:oopin/view/widgets/opinionmaker/opinionmaker.dart';
 import 'package:oopin/view/widgets/payment/paymentmethod.dart';
 import 'package:oopin/view/widgets/payment/sessionselection.dart';
+import 'package:oopin/view/widgets/profile/profile_details.dart';
 import 'package:oopin/view/widgets/reviews/ratingbox.dart';
 import 'package:oopin/view/widgets/reviews/reviewlist.dart';
 import 'package:oopin/view/widgets/services/servicecard.dart';
 import 'package:oopin/view/widgets/signup/inputotp.dart';
+import 'package:oopin/view/widgets/slider.dart';
 import 'package:oopin/view/widgets/subservices/subservices.dart';
+import 'package:oopin/view/widgets/wallet/all_transactions.dart';
+import 'package:oopin/view/widgets/wallet/card.dart';
+import 'package:oopin/view/widgets/wallet/transaction_history.dart';
+import 'package:oopin/view/widgets/wallet/transfer_amount.dart';
+import 'package:oopin/view/widgets/wallet/wallet_actions.dart';
+import 'package:oopin/view/widgets/wallet/wallet_stats.dart';
 
 class Newpage extends StatelessWidget {
   const Newpage({super.key});
@@ -47,6 +59,74 @@ class Newpage extends StatelessWidget {
                 children: [
                   Pageheader(pagename: 'Dashoard', ismain: true),
                   SizedBox(height: 10),
+                  OopinImageSlider(),
+                  SizedBox(height: 40),
+                  ProfileDetails(),
+                  SizedBox(height: 40),
+                  DeletionReasonSection(),
+                  DashboardGrid(),
+                  SizedBox(height: 40),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      OopinServiceCard(
+                        title: 'Turkish Food',
+                        impressions: 22,
+                        searches: 45,
+                      ),
+                      SizedBox(width: 10),
+                      OopinServiceCard(
+                        title: 'Asian Food',
+                        impressions: 22,
+                        searches: 45,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 40),
+                  BalanceCard(),
+                  SizedBox(height: 40),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ActionButton(
+                        title: 'Transfer Amount',
+                        imagePath: 'assets/img/transfer.png',
+                        onTap: () {},
+                      ),
+                      ActionButton(
+                        title: 'Add Amount',
+                        imagePath: 'assets/img/add-money.png',
+                        onTap: () {},
+                      ),
+                      ActionButton(
+                        title: 'History',
+                        imagePath: 'assets/img/history.png',
+                        onTap: () {},
+                      ),
+                      ActionButton(
+                        title: 'More',
+                        imagePath: 'assets/img/more.png',
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 40),
+                  TransactionHistoryScreen(),
+                  SizedBox(height: 40),
+                  TransactionHistory(),
+                  SizedBox(height: 40),
+                  TransferAmountSection(),
+                  SizedBox(height: 40),
+                  CustomStatsChart(),
+                  SizedBox(height: 40),
+                  CallHistory(
+                    personName: "Sarah Connor",
+                    serviceName: "Careers",
+                    cityName: "London",
+                    duration: "12 min",
+                    imagePath: "assets/img/person-img.png",
+                  ),
+                  SizedBox(height: 40),
                   Userheader(
                     content:
                         'Ask and discover opinions on anything that matters.',
