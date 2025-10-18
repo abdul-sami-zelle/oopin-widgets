@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oopin/utils/changeprofile.dart';
+import 'package:oopin/utils/customcalendar.dart';
 import 'package:oopin/utils/deleteaccountpopup.dart';
 import 'package:oopin/utils/drawer.dart';
 import 'package:oopin/utils/endcallpopup.dart';
@@ -8,10 +9,13 @@ import 'package:oopin/utils/helpoptions.dart';
 import 'package:oopin/utils/infobox.dart';
 import 'package:oopin/utils/pageheader.dart';
 import 'package:oopin/utils/policybox.dart';
+import 'package:oopin/utils/report_an_issue.dart';
 import 'package:oopin/utils/successpopup.dart';
 import 'package:oopin/utils/textfield.dart';
 import 'package:oopin/utils/userheader.dart';
+import 'package:oopin/view/widgets/contactus/field.dart';
 import 'package:oopin/view/widgets/deleteoopin/deletereason.dart';
+import 'package:oopin/view/widgets/oopin-add-services/subserives.dart';
 import 'package:oopin/view/widgets/oopin_call_history/call_history.dart';
 import 'package:oopin/view/widgets/cities/cities.dart';
 import 'package:oopin/view/widgets/dashoard/activitysection.dart';
@@ -30,6 +34,7 @@ import 'package:oopin/view/widgets/reviews/ratingbox.dart';
 import 'package:oopin/view/widgets/reviews/reviewlist.dart';
 import 'package:oopin/view/widgets/services/servicecard.dart';
 import 'package:oopin/view/widgets/signup/inputotp.dart';
+import 'package:oopin/view/widgets/signup/stepper.dart';
 import 'package:oopin/view/widgets/slider.dart';
 import 'package:oopin/view/widgets/subservices/subservices.dart';
 import 'package:oopin/view/widgets/wallet/all_transactions.dart';
@@ -59,6 +64,16 @@ class Newpage extends StatelessWidget {
                 children: [
                   Pageheader(pagename: 'Dashoard', ismain: true),
                   SizedBox(height: 10),
+                  CustomCalendar(width: MediaQuery.of(context).size.width - 20),
+                  SizedBox(height: 40),
+                  SelectableServices(),
+                  SizedBox(height: 40),
+                  ContactUsSection(),
+                  SizedBox(height: 40),
+                  ReportIssueSection(),
+                  SizedBox(height: 40),
+                  CustomStepper(),
+                  SizedBox(height: 40),
                   OopinImageSlider(),
                   SizedBox(height: 40),
                   ProfileDetails(),
